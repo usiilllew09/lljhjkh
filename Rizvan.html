@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анимация машины</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #00ff2a56; 
+        }
+        .road {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%; 
+            height: 100px; 
+            background-color: gray; 
+            border: 5px solid white;
+            transform: translate(-50%, -50%); 
+        }
+        .car {
+            position: absolute;
+            bottom: 10px; 
+            width: 100px; 
+            height: 50px;
+            background-color: rgb(9, 33, 248); 
+            border-radius: 15px; 
+            
+            animation: moveCar 5s linear infinite; 
+        }
+        .wheel {
+            width: 20px;
+            height: 20px;
+            background-color: black; 
+            border-radius: 100%; 
+            position: absolute;
+            bottom: -10px;
+        }
+        .wheel.left {
+            left: 10px;
+        }
+        .wheel.right {
+            right: 10px;
+        }
+        @keyframes moveCar {
+            from { left: -100px; } 
+            to { left: 100%; } 
+        }
+    </style>
+</head>
+<body>
+    <div class="road">
+        <div class="car">
+            <div class="wheel left"></div>
+            <div class="wheel right"></div>
+        </div>
+    </div>
+</body>
+</html>
